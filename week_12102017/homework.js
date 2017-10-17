@@ -11,9 +11,7 @@ const Library = class {
     }
 
     logBooks() {
-        this.books.forEach(book => {
-            console.log(book.toString());
-        });
+        this.books.forEach(book => console.log(book.toString()));
     }
 };
 
