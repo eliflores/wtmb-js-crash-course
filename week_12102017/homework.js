@@ -1,4 +1,4 @@
-// A very simple library :-)
+// A very simple personal library :-D
 
 const Library = class {
     constructor(name) {
