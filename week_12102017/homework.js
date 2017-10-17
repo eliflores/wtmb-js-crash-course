@@ -4,7 +4,6 @@ const Library = class {
     constructor(name) {
         this.name = name;
         this.books = [];
-        this.authors = {};
     }
 
     addBook(book) {
@@ -14,7 +13,7 @@ const Library = class {
     logBooks() {
         this.books.forEach(book => {
             console.log(book.toString());
-        })
+        });
     }
 };
 
