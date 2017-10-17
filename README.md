@@ -4,4 +4,4 @@ Notes and code for the [WTMB JavaScript Crash Course](http://wtmberlin.com/javas
 
 The code and notes are organized by week: 
 
-* [Week of 12/10/17]()
+* [Week of 12/10/17](https://github.com/mignonnesaurus/wtmb-js-crash-course/tree/master/week_12102017)
