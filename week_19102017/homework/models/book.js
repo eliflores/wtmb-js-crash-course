@@ -4,8 +4,4 @@ module.exports = class Book {
         this.author = author;
         this.isbn = isbn;
     }
-
-    toString() {
-        return 'Title: ' + this.title + ', Author: ' + this.author.name + ', ISBN: ' + this.isbn;
-    }
 };
