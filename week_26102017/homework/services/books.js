@@ -12,10 +12,10 @@ exports.loadBooks = async () => {
 }
 
 exports.findBookByAuthor = async (authorName) => {
-   let loadedBooks = this.loadBooks(); 
+   let loadedBooks = await this.loadBooks(); 
    let filteredBooks =  loadedBooks.filter(book => {
         return book.author.name == authorName;
     });
 
-    return filteredBooks;
+    return filteredBooks.map(book => book.title);
 };

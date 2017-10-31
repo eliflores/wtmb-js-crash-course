@@ -17,6 +17,11 @@ const main = async () => {
     
     console.log(' ~~~ Available Authors ~~~');
     await libraryService.loadAuthors();
+
+    console.log(' ~~~ Books by George R. Martin ~~~');
+    let booksByGeorge = await libraryService.booksByAuthor('George Martin');
+    console.log(booksByGeorge);
+
 };
 
 main();

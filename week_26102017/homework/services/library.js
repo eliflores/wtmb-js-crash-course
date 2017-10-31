@@ -18,6 +18,11 @@ exports.loadAuthors = async () => {
     });
 }
 
+exports.booksByAuthor = async (authorName) => {
+    let booksByAuthor = await booksService.findBookByAuthor(authorName);
+    return booksByAuthor;
+}
+
 const filterBooksByAuthor = (books, author) => {
     return books.filter(book => {
         return book.author.name == author.name;
