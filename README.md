@@ -1,4 +1,4 @@
-# Women Tech Makers Berlin JavaScript Crash Course
+# Women Tech Makers Berlin - JavaScript Crash Course
 
 Notes and code for the [WTMB JavaScript Crash Course](http://wtmberlin.com/javascript-crash-course/).
 
