@@ -6,6 +6,7 @@ exports.saveAuthors = authors => {
     database.save(authors, modelName);
 }
 
-exports.loadAuthors = author => {
-    return database.load(modelName).map(Author.create);
+exports.loadAuthors = async ()  => {
+    let loadedAuthors =  await database.load(modelName);
+    return loadedAuthors.map(Author.create);
 }

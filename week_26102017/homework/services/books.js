@@ -6,13 +6,14 @@ exports.saveBooks = books => {
     database.save(books, modelName);
 }
 
-exports.loadBooks = () => {
-    let loadedBooks = database.load(modelName);
+exports.loadBooks = async () => {
+    let loadedBooks = await database.load(modelName);
     return loadedBooks.map(Book.create);
 }
 
-exports.findBookByAuthor = (authorName) => {
-   let filteredBooks =  this.loadBooks().filter(book => {
+exports.findBookByAuthor = async (authorName) => {
+   let loadedBooks = this.loadBooks(); 
+   let filteredBooks =  loadedBooks.filter(book => {
         return book.author.name == authorName;
     });
 

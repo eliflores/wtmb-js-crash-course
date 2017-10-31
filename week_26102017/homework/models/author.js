@@ -11,8 +11,8 @@ module.exports = class Author {
     }
 
     toString() {
-        let bookTitles = this.writtenBooks.map(book => book.c); 
-        return `Name: ${this.name}, Books: ${bookTitles}`;
+        let bookTitles = this.writtenBooks.map(book => book.title); 
+        return `Name: ${this.name} - Books: ${bookTitles}`;
     }
 
     static create(obj) {

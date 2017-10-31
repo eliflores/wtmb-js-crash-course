@@ -11,11 +11,16 @@ booksService.saveBooks(books);
 
 console.log('~~~~ Welcome to your personal library ~~~~');
 
-console.log(' ~~~ Available Books ~~~');
-libraryService.loadLibrary();
+const main = async () => {
+    console.log(' ~~~ Available Books ~~~');
+    await libraryService.loadLibrary();
+    
+    console.log(' ~~~ Available Authors ~~~');
+    await libraryService.loadAuthors();
+};
 
-console.log(' ~~~ Available Authors ~~~');
-libraryService.loadAuthors();
+main();
+
 
 
 

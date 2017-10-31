@@ -1,20 +1,25 @@
 const booksService = require('./books');
 const authorsService = require('./authors');
 
-exports.loadLibrary = () => {
-    booksService.loadBooks().forEach(book => {
+exports.loadLibrary = async () => {
+    let loadedBooks = await booksService.loadBooks();
+    loadedBooks.forEach(book => {
         console.log(` ~~ ${book.toString()} ~~`);
     });
 }
 
-exports.loadAuthors = () => {
-    authorsService.loadAuthors().forEach(author => {
-        addBooksToAuthor(author);
+exports.loadAuthors = async () => {
+    let loadedAuthors = await authorsService.loadAuthors();
+    let loadedBooks = await booksService.loadBooks();
+    loadedAuthors.forEach(author => {
+        let booksByAuthor = filterBooksByAuthor(loadedBooks, author);
+        author.addWrittenBooks(booksByAuthor);
         console.log(`~~ ${author.toString()}`);
     });
 }
 
-const addBooksToAuthor = (author) => {
-    let booksByAuthor = booksService.findBookByAuthor(author.name);
-    author.addWrittenBooks(booksByAuthor);
+const filterBooksByAuthor = (books, author) => {
+    return books.filter(book => {
+        return book.author.name == author.name;
+    });
 };
