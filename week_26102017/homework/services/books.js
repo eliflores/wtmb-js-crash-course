@@ -2,8 +2,8 @@ const database = require('../data/database');
 const Book = require('../models/book')
 const modelName = 'books';
 
-exports.save = books => {
-    database.save(books, modelName);
+exports.save = async (books) => {
+    await database.save(books, modelName);
 }
 
 exports.load = async () => {
