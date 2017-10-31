@@ -2,7 +2,7 @@ const database = require('../data/database');
 const Author = require('../models/author');
 const modelName = 'authors';
 
-exports.save = async(authors) => {
+exports.save = async (authors) => {
     await database.save(authors, modelName);
 }
 
