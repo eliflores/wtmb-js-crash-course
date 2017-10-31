@@ -16,6 +16,5 @@ exports.findByAuthor = async (authorName) => {
    let filteredBooks =  loadedBooks.filter(book => {
         return book.author.name == authorName;
     });
-
     return filteredBooks.map(book => book.title);
 };
