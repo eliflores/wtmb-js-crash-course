@@ -11,7 +11,9 @@ module.exports = class Author {
     }
 
     toString() {
-        let bookTitles = this.writtenBooks.map(book => book.title); 
+        let bookTitles = this.writtenBooks
+            .map(book => book.title)
+            .join(', ');
         return `Name: ${this.name} - Books: ${bookTitles}`;
     }
 

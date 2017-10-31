@@ -11,6 +11,7 @@ exports.createAuthors = () => {
 exports.createBooks = (authors) => {
     return [
         new Book('Game of Thrones', authors[0], '9788496422612'),
-        new Book('Le Petit Prince', authors[1], '9788995317471')
+        new Book('Le Petit Prince', authors[1], '9788995317471'),
+        new Book('Clash of Kings', authors[0], '9782857046202')
     ];
 }

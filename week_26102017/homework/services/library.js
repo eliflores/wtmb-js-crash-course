@@ -4,7 +4,7 @@ const authorsService = require('./authors');
 exports.loadLibrary = async () => {
     let loadedBooks = await booksService.loadBooks();
     loadedBooks.forEach(book => {
-        console.log(` ~~ ${book.toString()} ~~`);
+        console.log(`${book.toString()}`);
     });
 }
 
@@ -14,13 +14,13 @@ exports.loadAuthors = async () => {
     loadedAuthors.forEach(author => {
         let booksByAuthor = filterBooksByAuthor(loadedBooks, author);
         author.addWrittenBooks(booksByAuthor);
-        console.log(`~~ ${author.toString()}`);
+        console.log(`${author.toString()}`);
     });
 }
 
 exports.booksByAuthor = async (authorName) => {
     let booksByAuthor = await booksService.findBookByAuthor(authorName);
-    return booksByAuthor;
+    return booksByAuthor.join(', ');
 }
 
 const filterBooksByAuthor = (books, author) => {

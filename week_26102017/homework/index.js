@@ -12,13 +12,13 @@ booksService.saveBooks(books);
 console.log('~~~~ Welcome to your personal library ~~~~');
 
 const main = async () => {
-    console.log(' ~~~ Available Books ~~~');
+    console.log('    ~~~ Available Books ~~~');
     await libraryService.loadLibrary();
     
-    console.log(' ~~~ Available Authors ~~~');
+    console.log('    ~~~ Available Authors ~~~');
     await libraryService.loadAuthors();
 
-    console.log(' ~~~ Books by George R. Martin ~~~');
+    console.log('    ~~~ Books by George R. Martin ~~~');
     let booksByGeorge = await libraryService.booksByAuthor('George Martin');
     console.log(booksByGeorge);
 
