@@ -1,16 +1,16 @@
 const booksService = require('./books');
 const authorsService = require('./authors');
 
-exports.loadLibrary = async () => {
-    let loadedBooks = await booksService.loadBooks();
+exports.loadBooks = async () => {
+    let loadedBooks = await booksService.load();
     loadedBooks.forEach(book => {
         console.log(`${book.toString()}`);
     });
 }
 
 exports.loadAuthors = async () => {
-    let loadedAuthors = await authorsService.loadAuthors();
-    let loadedBooks = await booksService.loadBooks();
+    let loadedAuthors = await authorsService.load();
+    let loadedBooks = await booksService.load();
     loadedAuthors.forEach(author => {
         let booksByAuthor = filterBooksByAuthor(loadedBooks, author);
         author.addWrittenBooks(booksByAuthor);
@@ -19,7 +19,7 @@ exports.loadAuthors = async () => {
 }
 
 exports.booksByAuthor = async (authorName) => {
-    let booksByAuthor = await booksService.findBookByAuthor(authorName);
+    let booksByAuthor = await booksService.findByAuthor(authorName);
     return booksByAuthor.join(', ');
 }
 

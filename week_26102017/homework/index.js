@@ -4,16 +4,16 @@ const authorsService = require('./services/authors');
 const libraryService = require('./services/library');
 
 const authors = utils.createAuthors();
-authorsService.saveAuthors(authors);
+authorsService.save(authors);
 
 const books = utils.createBooks(authors);
-booksService.saveBooks(books);
+booksService.save(books);
 
 console.log('~~~~ Welcome to your personal library ~~~~');
 
 const main = async () => {
     console.log('    ~~~ Available Books ~~~');
-    await libraryService.loadLibrary();
+    await libraryService.loadBooks();
     
     console.log('    ~~~ Available Authors ~~~');
     await libraryService.loadAuthors();

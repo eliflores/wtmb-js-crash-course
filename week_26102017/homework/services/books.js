@@ -2,17 +2,17 @@ const database = require('../data/database');
 const Book = require('../models/book')
 const modelName = 'books';
 
-exports.saveBooks = books => {
+exports.save = books => {
     database.save(books, modelName);
 }
 
-exports.loadBooks = async () => {
+exports.load = async () => {
     let loadedBooks = await database.load(modelName);
     return loadedBooks.map(Book.create);
 }
 
-exports.findBookByAuthor = async (authorName) => {
-   let loadedBooks = await this.loadBooks(); 
+exports.findByAuthor = async (authorName) => {
+   let loadedBooks = await this.load(); 
    let filteredBooks =  loadedBooks.filter(book => {
         return book.author.name == authorName;
     });
