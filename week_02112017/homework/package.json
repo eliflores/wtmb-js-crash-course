@@ -1,0 +1,21 @@
+{
+  "name": "week_19102017",
+  "version": "1.0.0",
+  "description": "Week 2 project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mignonnesaurus/wtmb-js-crash-course.git"
+  },
+  "author": "Ely Flores",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}
