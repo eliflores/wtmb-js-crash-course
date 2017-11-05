@@ -20,6 +20,5 @@
 ## Homework
 * Take your current application and make it a web application! in such a way that we can interact with it through the browser (like we did in class today!)
 * Check out the `final` branch of the `wtmbjs-4` repository and go through the changes
-    * e.g. taking `routes` to a separate
 * Think about the application that you will build for graduation!
 
