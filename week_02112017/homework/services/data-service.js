@@ -2,7 +2,7 @@ const fs = require('fs');
 
 exports.save = async (obj, modelName) => {
     return new Promise((resolve, reject) => {
-        fs.writeFile(`${__dirname}../data/${modelName}.json`, JSON.stringify(obj), (err, contents) => {
+        fs.writeFile(`${__dirname}/../data/${modelName}.json`, JSON.stringify(obj), (err, contents) => {
             if (err) {
                 reject('err');
             }
@@ -13,7 +13,7 @@ exports.save = async (obj, modelName) => {
 }
 
 exports.load = async (modelName) => {
-    let content = await readFile(`${__dirname }../data/${modelName}.json`);
+    let content = await readFile(`${__dirname }/../data/${modelName}.json`);
     return JSON.parse(content);
 }
 

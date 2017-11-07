@@ -1,4 +1,4 @@
-const Author = require('./author');
+const Author = require('./author-model');
 
 module.exports = class Book {
     constructor(title, author, isbn) {

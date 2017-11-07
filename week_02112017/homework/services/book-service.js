@@ -1,12 +1,12 @@
 const dataService = require('./data-service');
-const Book = require('../models/book')
+const Book = require('../models/book-model')
 const modelName = 'books';
 
 exports.save = async (books) => {
     await dataService.save(books, modelName);
 }
 
-exports.load = async () => {
+exports.findAll = async () => {
     let loadedBooks = await dataService.load(modelName);
     return loadedBooks.map(Book.create);
 }
