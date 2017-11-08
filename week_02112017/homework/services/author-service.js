@@ -11,7 +11,6 @@ async function findAll() {
 async function find(authorId) {
     const allAuthors = await findAll()
     return allAuthors.find(author => author.id == authorId)
-    
 }
 
 async function add(author) {

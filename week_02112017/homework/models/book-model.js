@@ -9,7 +9,6 @@ module.exports = class Book {
     }
 
     static create(obj) {
-        let author = Author.create(obj.author);
         return new Book(obj.id, obj.isbn, obj.title, obj.author);
     }
 };
