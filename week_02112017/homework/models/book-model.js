@@ -1,18 +1,15 @@
 const Author = require('./author-model');
 
 module.exports = class Book {
-    constructor(title, author, isbn) {
+    constructor(id, isbn, title, author) {
+        this.id = id;
+        this.isbn = isbn;
         this.title = title;
         this.author = author;
-        this.isbn = isbn;
     }
 
     static create(obj) {
         let author = Author.create(obj.author);
-        return new Book(obj.title, author, obj.isbn);
-    }
-
-    toString() {
-        return `Title: ${this.title} - ISBN: ${this.isbn} - Author: ${this.author.name}`;
+        return new Book(obj.id, obj.isbn, obj.title, obj.author);
     }
 };

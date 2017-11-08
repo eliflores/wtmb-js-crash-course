@@ -1,4 +1,4 @@
-const dataService = require('./data-service');
+const dataService = require('../data/data-service');
 const Book = require('../models/book-model')
 const modelName = 'books';
 

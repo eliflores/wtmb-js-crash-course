@@ -1,23 +1,15 @@
 module.exports = class Author {
-    constructor(name) {
+    constructor(id, name) {
+        this.id = id;
         this.name = name;
         this.writtenBooks = [];
     }
 
-    addWrittenBooks(books) {
-        books.forEach(book => {
-            this.writtenBooks.push(book);
-        });
-    }
-
-    toString() {
-        let bookTitles = this.writtenBooks
-            .map(book => book.title)
-            .join(', ');
-        return `Name: ${this.name} - Books: ${bookTitles}`;
+    addWrittenBook(books) {
+        this.writtenBooks.push(book);
     }
 
     static create(obj) {
-        return new Author(obj.name);
+        return new Author(obj.id, obj.name);
     }
 };
