@@ -7,5 +7,5 @@ The code and notes are organized by week:
 1. [12/10/17](https://github.com/mignonnesaurus/wtmb-js-crash-course/tree/master/week_12102017)
 2. [19/10/17](https://github.com/mignonnesaurus/wtmb-js-crash-course/tree/master/week_19102017)
 3. [26/10/17](https://github.com/mignonnesaurus/wtmb-js-crash-course/tree/master/week_26102017)
-4. [02/10/17](https://github.com/mignonnesaurus/wtmb-js-crash-course/tree/master/week_02112017)
-5. [09/10/17](https://github.com/mignonnesaurus/wtmb-js-crash-course/tree/master/week_09112017)
+4. [02/11/17](https://github.com/mignonnesaurus/wtmb-js-crash-course/tree/master/week_02112017)
+5. [09/11/17](https://github.com/mignonnesaurus/wtmb-js-crash-course/tree/master/week_09112017)
