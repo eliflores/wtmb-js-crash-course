@@ -23,9 +23,4 @@ router.post('/', async (req, res, next) => {
     res.send(author)
 })
 
-router.post('/:id/book', async (req, res, next) => {
-    authorService.addWrittenBook(req.params.id, req.body)
-    res.send(author)
-})
-
 module.exports = router

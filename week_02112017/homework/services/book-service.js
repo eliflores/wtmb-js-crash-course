@@ -1,5 +1,4 @@
 const dataService = require('../data/data-service');
-const authorService = require('./author-service');
 const Book = require('../models/book-model')
 const MODEL_NAME = 'books';
 
@@ -24,9 +23,7 @@ async function add(book) {
 
     book = Book.create(book)
     allBooks.push(book)
-
-    saveAll(allBooks)
-    
+    await saveAll(allBooks)
     return book
 }
 
@@ -39,21 +36,12 @@ async function del(bookId) {
 
     allBooks.splice(bookIndex, 1)
 
-    saveAll(allBooks)
+    await saveAll(allBooks)
 }
 
 async function saveAll(books) {
     return dataService.save(books, MODEL_NAME)
 }
-
-// exports.findByAuthor = async (authorName) => {
-//     let loadedBooks = await this.load();
-//     let filteredBooks = loadedBooks.filter(book => {
-//         return book.author.name == authorName;
-//     });
-//     return filteredBooks.map(book => book.title);
-// };
-
 
 module.exports = {
     findAll,

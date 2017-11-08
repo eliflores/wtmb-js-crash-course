@@ -28,24 +28,6 @@ async function add(author) {
     return author
 }
 
-async function addWrittenBook(authorId, bookId) {
-    const author = await find(authorId)
-    const book = await bookService.find(bookId)
-    author.addWrittenBook(book)
-}
-
-async function del(authorId) {
-    const allAuthors = await findAll()
-    const authorIndex = allAuthors.findIndex(a => a.id == authorId)
-    if (authorIndex < 0) {
-        return
-    }
-
-    allAuthors.splice(authorIndex, 1)
-
-    saveAll(allAuthors)
-}
-
 async function saveAll(authors) {
     return dataService.save(authors, MODEL_NAME);
 }
@@ -53,6 +35,5 @@ async function saveAll(authors) {
 module.exports = {
     findAll,
     find,
-    add,
-    addWrittenBook
+    add
 }
