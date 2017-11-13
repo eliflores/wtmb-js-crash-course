@@ -1,6 +1,5 @@
 const bookService = require('./book-service')
 const AuthorModel = require('../models/author-model');
-const MODEL_NAME = 'authors';
 
 async function findAll() {
     return AuthorModel.find();
