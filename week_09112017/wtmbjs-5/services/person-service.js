@@ -1,5 +1,3 @@
-const fs = require('fs')
-
 const PersonModel = require('../models/person-model')
 
 async function findAll() {
