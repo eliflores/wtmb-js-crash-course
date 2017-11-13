@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 The authors we have in the library!
+    if authors.length
+        each author in authors
+            td #{author.name}
+    else
+        p Please add authors to the library!
