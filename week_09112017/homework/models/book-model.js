@@ -1,14 +1,21 @@
-const Author = require('./author-model');
+const mongoose = require('mongoose');
+const AutoIncrement = require('mongoose-sequence')(mongoose);
 
-module.exports = class Book {
-    constructor(id, isbn, title, author) {
-        this.id = id;
-        this.isbn = isbn;
-        this.title = title;
-        this.author = author;
+const BookSchema = mongoose.Schema({
+    isbn: {
+        type: String,
+        require: true
+    }, 
+    title: {
+        type: String,
+        require: true
+    }, 
+    author: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Author'
     }
+});
 
-    static create(obj) {
-        return new Book(obj.id, obj.isbn, obj.title, obj.author);
-    }
-};
+BookSchema.plugin(AutoIncrement, {inc_field: 'book_id'});
+
+module.exports = mongoose.model('Book', BookSchema);

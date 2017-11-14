@@ -7,7 +7,6 @@ router.get('/', async (req, res, next) => {
     res.send(await bookService.findAll())
 });
 
-
 router.get('/all', async (req, res, next) => {
     const books = await bookService.findAll()
     res.render('book-list', { books })

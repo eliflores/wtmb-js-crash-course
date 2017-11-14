@@ -1,7 +1,7 @@
 {
-  "name": "week_19102017",
+  "name": "week_09112017",
   "version": "1.0.0",
-  "description": "Week 2 project ",
+  "description": "Week 5 project ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,4 +1,3 @@
-const bookService = require('./book-service')
 const AuthorModel = require('../models/author-model');
 
 async function findAll() {
@@ -6,7 +5,7 @@ async function findAll() {
 }
 
 async function find(id) {
-    return AuthorModel.findOne({id});
+    return AuthorModel.findOne({ author_id: id });
 }
 
 async function add(author) {
