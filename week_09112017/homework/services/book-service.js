@@ -6,17 +6,17 @@ async function findAll() {
 }
 
 async function find(id) {
-    return BookModel.findOne({ book_id: id }).populate('author');
+    return BookModel.findOne({ id }).populate('author');
 }
 
 async function add(book) {
     const author = await AuthorService.find(book.authorId);
-    book.author = author.id
+    book.author = author._id
     return BookModel.create(book);
 }
 
 async function del(id) {
-    return BookModel.remove({ book_id: id });
+    return BookModel.remove({ id });
 }
 
 module.exports = {

@@ -5,7 +5,7 @@ async function findAll() {
 }
 
 async function find(id) {
-    return AuthorModel.findOne({ author_id: id });
+    return AuthorModel.findOne({ id });
 }
 
 async function add(author) {

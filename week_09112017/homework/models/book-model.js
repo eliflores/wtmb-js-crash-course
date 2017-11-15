@@ -16,6 +16,6 @@ const BookSchema = mongoose.Schema({
     }
 });
 
-BookSchema.plugin(AutoIncrement, {inc_field: 'book_id'});
+BookSchema.plugin(AutoIncrement, {id:'bookSchemaIdCounter', inc_field: 'id'});
 
 module.exports = mongoose.model('Book', BookSchema);

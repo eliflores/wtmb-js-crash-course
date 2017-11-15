@@ -8,6 +8,6 @@ const AuthorSchema = mongoose.Schema({
     }
 });
 
-AuthorSchema.plugin(AutoIncrement, {inc_field: 'author_id'});
+AuthorSchema.plugin(AutoIncrement, {id:'authorSchemaIdCounter', inc_field: 'id'});
 
 module.exports = mongoose.model('Author', AuthorSchema);
