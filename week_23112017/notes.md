@@ -30,13 +30,14 @@
 
 * If the tests are simple and well structure, then the tests become the documentation!
 
-* --save-dev (It is a `developer` dependency. Do not need to install this in production!)
+* `--save-dev` => It is a `developer` dependency. Do not need to install this in production!
 
 * Unit Testing: You have inputs and you know the expected output and this is when it makes sense to write the test first and then implement the functionality.
 * Tests they don't share state between them, you always start in a clean state.
 * You are writing tests to save the future, your own future and the future of your business!
 
->> Always write your code in such a matter that the next developer who will read your code is a psycopath that knows where you live. Make sure you don't piss him off! :D
+**Remember:**
+> Always write your code in such a matter that the next developer who will read your code is a psycopath that knows where you live. Make sure you don't piss him off!
 
 * 5x errors are server errors.
 * 4x errors are errors from the user request.
