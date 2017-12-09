@@ -5,19 +5,19 @@
 The goal of today is to deploy our application to a `production` server!
 
 ## Developer Experience (DE)
-    * UX is as good as the User Experience is! :) 
-        * If it is easy to test, if it is easy to deploy, then developers are less frustrated and can actually focus on the Developer Experience. 
-        * If you can improve the DE, then you can expect more value from developers. 
+* UX is as good as the User Experience is! :) 
+    * If it is easy to test, if it is easy to deploy, then developers are less frustrated and can actually focus on the Developer Experience. 
+    * If you can improve the DE, then you can expect more value from developers. 
 
 * Let developers own the job!
 
 ### DevOps
-    * It's defined as a new role in Engineering. 
-    * Infrastructure is available and it is there for Engineers! 
-    * They write code so that everything is automated so that developers are able to own the product.
-    * Developers have ownership of deploying to production 
-    * Developers can take responsibility for their actions. 
-    * This takes some blaming away!
+* It's defined as a new role in Engineering. 
+* Infrastructure is available and it is there for Engineers! 
+* They write code so that everything is automated so that developers are able to own the product.
+* Developers have ownership of deploying to production 
+* Developers can take responsibility for their actions. 
+* This takes some blaming away!
 
 ### Concepts
 * Docker
@@ -43,7 +43,7 @@ The goal of today is to deploy our application to a `production` server!
             RUN npm install
             ADD . .
         ```
-            * Makes sure that we only run `npm install` when we change `package.json` and we make use of caches.
+        * Makes sure that we only run `npm install` when we change `package.json` and we make use of caches.
         * `CMD` run a command 
 * docker-compose file: 
     * Yml file where we declare the dependencies of my application.
